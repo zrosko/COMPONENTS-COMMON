@@ -1,0 +1,51 @@
+package hr.adriacomsoftware.app.common.gradani.krediti.facade;
+
+import hr.adriacomsoftware.app.common.gradani.dto.OsobaRs;
+import hr.adriacomsoftware.app.common.gradani.krediti.dto.ObavijestRs;
+import hr.adriacomsoftware.app.common.gradani.krediti.dto.ObavijestVo;
+import hr.adriacomsoftware.app.common.gradani.krediti.dto.OpomenaRs;
+import hr.adriacomsoftware.app.common.gradani.krediti.dto.OpomenaVo;
+import hr.adriacomsoftware.app.common.gradani.krediti.dto.RocnostRs;
+import hr.adriacomsoftware.app.common.gradani.krediti.dto.RocnostVo;
+import hr.adriacomsoftware.app.common.jb.dto.OsnovniRs;
+import hr.adriacomsoftware.app.common.jb.dto.OsnovniVo;
+import hr.adriacomsoftware.app.common.jb.dto.PartijaRs;
+
+public interface KreditiGradanaFacade {    
+    public abstract RocnostRs izvjestajRocnostiOtplate(RocnostVo value) throws Exception;
+    public abstract RocnostRs izvjestajRocnostiOtplateOib(RocnostVo value) throws Exception;
+	public abstract OsnovniRs izvjestajHBORKredita(OsnovniVo value) throws Exception;
+	public abstract OsobaRs procitajSveOsobe() throws Exception;
+	public abstract OsobaRs pronadiSveOsobe(OsnovniVo value) throws Exception;	
+	public abstract OsnovniRs izvjestajSviDospjeliKrediti(OsnovniVo value) throws Exception;
+	public abstract OsnovniRs izvjestajDospjeliKrediti(OsnovniVo value) throws Exception;
+	public abstract OsnovniRs izvjestajZatezneKamate(OsnovniVo value) throws Exception;
+	public abstract OsnovniRs izvjestajUgovoreneKamate(OsnovniVo value) throws Exception;
+	public abstract OsnovniRs izvjestajInterkalarneKamate(OsnovniVo value) throws Exception;
+	public abstract OsnovniRs izvjestajNaknade(OsnovniVo value) throws Exception;
+	public abstract OsnovniRs izvjestajOpomene(OsnovniVo value) throws Exception;
+	public abstract OsnovniRs izvjestajHamagKrediti(OsnovniVo value) throws Exception;
+	public abstract PartijaRs izvjestajIzdanihKreditaZaPeriod(OsnovniVo value) throws Exception;
+	public abstract PartijaRs izvjestajPotvrdaPlacenihKamata(OsnovniVo value) throws Exception;	    
+    public abstract PartijaRs izvjestajUsporedbaPrometaSaGlavnomKnjigom(OsnovniVo value) throws Exception;
+    public abstract PartijaRs izvjestajStanjeKontaPartija(OsnovniVo value) throws Exception;
+	public abstract ObavijestRs izvjestajObavijestiOtplataKredita(ObavijestVo value) throws Exception;
+	public abstract ObavijestRs procitajSveObradeObavijesti(ObavijestVo value) throws Exception;
+	public abstract ObavijestRs iskljuciObavijesti(ObavijestVo value) throws Exception;
+    public abstract ObavijestRs ukljuciObavijesti(ObavijestVo value) throws Exception;
+    public abstract OpomenaRs iskljuciOpomene(OpomenaVo value) throws Exception;
+    public abstract OpomenaRs ukljuciOpomene(OpomenaVo value) throws Exception;
+	public abstract OpomenaRs izvjestajOpomeneKredita(OpomenaVo value) throws Exception;
+	public abstract OpomenaRs procitajSveObradeOpomena(OpomenaVo value) throws Exception;
+	public abstract PartijaRs izvjestajNaplataRezervacija(OsnovniVo value) throws Exception;
+	public abstract OsnovniRs pregledPrometaZaPeriod(OsnovniVo value) throws Exception;
+	//public abstract OsnovniRs izvjestajObracunAnuitetaMjesecni(OsnovniVo value) throws J2EEException;
+	public abstract OsnovniRs izvjestajNaplataPotrazivanja(OsnovniVo value) throws Exception;
+	public abstract OsnovniRs izvjestajPoredakKredita(OsnovniVo value) throws Exception;
+	public abstract OsnovniRs izvjestajRasporedAnuiteta(OsnovniVo value) throws Exception;
+	public abstract OsnovniRs izvjestajRasporedAnuitetaRekap(OsnovniVo value) throws Exception;
+	public abstract OsnovniRs izvjestajPretplata(OsnovniVo value) throws Exception;
+	public abstract OsnovniRs izvjestajProlazniRacun(OsnovniVo value) throws Exception;
+	public abstract OsnovniRs izvjestajHNBKreditiZaKupnjuDionica(OsnovniVo value) throws Exception;
+	public abstract OsnovniRs izvjestajR1(OsnovniVo value) throws Exception;
+	}
